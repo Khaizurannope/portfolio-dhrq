@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 bg-white dark:bg-gray-900 dark:text-gray-200 transition-colors duration-200;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold text-gray-900 dark:text-white;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300 text-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 shadow-md hover:shadow-lg dark:bg-primary-500 dark:hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 dark:bg-gray-800 dark:text-primary-400 dark:border-primary-400 dark:hover:bg-gray-700;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-8 relative pb-3 inline-block dark:text-white;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary-600 dark:bg-primary-500;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-primary-200 dark:border-primary-700 ml-4;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-600 dark:bg-primary-500;
+  }
+  
+  .timeline-item:last-child {
+    @apply border-transparent;
+  }
+  
+  .skill-bar {
+    @apply relative h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply absolute top-0 left-0 h-full bg-primary-600 dark:bg-primary-500;
+  }
+  
+  .social-icon {
+    @apply w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-500 transition-colors duration-300;
+  }
+}
