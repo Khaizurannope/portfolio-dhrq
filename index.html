@@ -82,33 +82,36 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="md:w-1/2" data-aos="fade-right">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Hi, Saya <span class="text-primary-600 dark:text-primary-500">Dhiaraqi A Khaizuran</span></h1>
-          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">UI & IoT Enthusiast</p>
-          <div class="flex flex-wrap gap-4">
-            <a href="#projects" class="btn btn-primary">
-              Lihat Proyek Saya
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <a href="#cv" class="btn btn-secondary">
-              Unduh CV
-              <i class="fas fa-download ml-2"></i>
-            </a>
-          </div>
-        </div>
-        <div class="md:w-1/2 flex justify-center items-center" data-aos="fade-left">
-          <img 
-            src="./src/img/DSC_2390-removebg-preview.png" 
-            alt="Dhiaraqi A Khaizuran" 
-            class="rounded-lg shadow-lg max-w-full h-auto"
-          />
-        </div>
-      </div>
+  <section id="hero" class="min-h-screen flex items-center justify-center text-center text-white relative">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center filter brightness-50" style="background-image: url('./src/img/bg.jpg');"></div>
+  
+  <!-- Overlay Gelap -->
+  <div class="absolute inset-0 bg-black opacity-60"></div>
+
+  <div class="container px-4 relative z-10">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+      Merancang Teknologi.<br />
+      <span class="text-cyan-400">Menyentuh Pengalaman.</span>
+    </h1>
+    <p class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+      Portofolio ini menampilkan proyek Internet of Things (IoT), desain antarmuka web modern, dan pengembangan situs web fungsional.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#projects" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+        Lihat Proyek
+      </a>
+      <a href="#contact" class="bg-gray-100 text-gray-800 hover:bg-gray-300 font-semibold py-3 px-6 rounded-lg transition duration-300">
+        Hubungi Saya
+      </a>
+      <a href="#cv" class="border border-cyan-400 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+        <i class="fas fa-download"></i> Unduh CV
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- About Section -->
   <section id="about" class="py-20 bg-white dark:bg-gray-800">
